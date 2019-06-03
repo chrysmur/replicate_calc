@@ -2,27 +2,32 @@ import React from 'react';
 import './App.css';
 import Panel from './components/panel'
 import Calculate from './components/calculate';
+import Display from './components/display'
 
 class App extends React.Component {
   constructor(){     
     super()
-    this.state = {
+    this.state = {obj:{
       res:null,
       newval:null,
+      valone:null,
       ops:null
-    }
+    }}
     this.handleClick =  this.handleClick.bind(this)
   } 
 
-  handleClick() {
-    return (
-      alert("It worked")
-    )
+  handleClick(btnname) {
+    let obj=  this.state.obj;
+    obj.newval=btnname;
+   this.setState({obj:Calculate(obj)})
+   console.log(this.state.obj)
   }
+  
   render(){
   return (
     <div className='disppanel'>
-      <Panel clickhandler={this.handleClick}/>
+    <Display total ={this.state.obj.res || this.state.obj.valone || '0'}/>
+      <Panel clickHandler={this.handleClick}/>
     </div>
   );
   }
