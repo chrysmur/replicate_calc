@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Panel from './components/panel'
-import Calculate from './components/calculate';
+import Calculate from './components/calc';
 import Display from './components/display'
 
 class App extends React.Component {

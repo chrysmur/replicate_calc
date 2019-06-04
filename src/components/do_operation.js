@@ -33,6 +33,7 @@ function doOperation (obj){
         obj.res=null
         return obj
     }
+    //marked for destruction
     if (obj.ops==='-/+'){
         if(obj.res){
             obj.res=(-1)*obj.res
