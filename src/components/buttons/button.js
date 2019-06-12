@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import './button.css'
 
 
-export default class Button extends React.Component{
+/* export default class Button extends React.Component{
     PropTypes = {
         name: PropTypes.string,
         clickHandler: PropTypes.func
@@ -27,4 +27,21 @@ export default class Button extends React.Component{
         </div>
         );
     }
+} */
+const Button = (props) => {
+    const {name, clickHandler} = props
+    const handleClick=(event) =>{
+        event.preventDefault()
+        clickHandler(name)
+    }
+        return (
+            <div className='button'>
+                <button className='buttonname'
+                onClick = {handleClick}> {name}</button>
+            </div>
+        )
+
+        
+    
 }
+export default Button

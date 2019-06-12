@@ -27,7 +27,8 @@ class App extends React.Component {
   return (
     <div className='disppanel'>
     <Display total ={this.state.obj.res || this.state.obj.valone || '0'}/>
-      <Panel clickHandler={this.handleClick}/>
+      <Panel clickHandler={this.handleClick} key="panel"/>
+      
     </div>
   );
   }

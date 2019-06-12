@@ -80,14 +80,8 @@ function Calculate(obj){
                 obj.newval=null
             } break;  
         case "+":
-            handleOperaters(obj)            
-            break
         case "-":
-            handleOperaters(obj)            
-            break
         case "x":
-            handleOperaters(obj)            
-            break
         case "/":
             handleOperaters(obj)            
             break
