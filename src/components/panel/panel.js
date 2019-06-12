@@ -1,6 +1,6 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import Button from './button'
+import Button from '../buttons/button'
 import './panel.css'
 
 const ButtonNames=props=> {
@@ -26,7 +26,7 @@ const Panel = props=>{
                     }
     return (
         <div className='panel'>            
-            <PlaceRows objRows={objRows} handler={props.clickHandler} key="objRows"/>
+            <PlaceRows objRows={objRows} handler={props.clickHandler}/>
         </div>
         ); 
 

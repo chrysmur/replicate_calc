@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Panel from './components/panel'
-import Calculate from './components/calc';
-import Display from './components/display'
+import Panel from '../panel/panel'
+import Calculate from '../utils/calculate';
+import Display from '../display/display'
 
 class App extends React.Component {
   constructor(){     
@@ -14,8 +14,7 @@ class App extends React.Component {
       ops:null
     }}
     this.handleClick =  this.handleClick.bind(this)
-  } 
-
+  }
   handleClick(btnname) {
     let obj=  this.state.obj;
     obj.newval=btnname;
@@ -27,11 +26,9 @@ class App extends React.Component {
   return (
     <div className='disppanel'>
     <Display total ={this.state.obj.res || this.state.obj.valone || '0'}/>
-      <Panel clickHandler={this.handleClick} key="panel"/>
-      
+      <Panel clickHandler={this.handleClick}/>      
     </div>
   );
   }
 }
-
 export default App;

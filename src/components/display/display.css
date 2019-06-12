@@ -1,6 +1,9 @@
 .display{
-    text-align:center;
-    width: 290px;
+    text-align:right;
+    width: 400px;
+    font-size: 60px;
     background-color: azure;
-    color: rgb(35, 126, 136);
+    color: rgb(35, 126, 160);
+    display: flex;
+    flex: 1 0 auto;
 }
